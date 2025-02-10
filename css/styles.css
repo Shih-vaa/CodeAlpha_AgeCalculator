@@ -1,0 +1,179 @@
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%); /* Start from below */
+        opacity: 0; /* Optional: start with 0 opacity */
+    }
+    to {
+        transform: translateY(0); /* Slide to original position */
+        opacity: 1; /* Optional: fade in to full opacity */
+    }
+}
+
+body {
+
+    font-family: ubuntu;
+    transition: background-color 2s, color 0.5s;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.toggle-btn{
+    padding: 20px 20px 20px 20px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(26, 25, 25);
+}
+
+.first-para{
+    font-size: 35px;
+    /* animation: slideIn 2s forwards; */
+    text-align: left;
+    width: 100%;
+    color: aliceblue;
+}
+
+.btn1 {
+    color: white;
+    font-size: larger;
+    background-color: transparent;
+    border: #333333;
+    border: 1px solid rgb(0, 217, 255);
+    border-radius: 30px;
+    margin: 20px;
+    /* position: relative; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */
+    animation: slideIn 4s forwards;
+}
+.btn2{
+    margin:30px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    animation: fadeIn 2s ease-in;
+    position: relative;
+}
+
+.first-page {
+    background-image: url('../assets/eugene-zhyvchik-xJY-7gtC38o-unsplash.jpg');
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+    position: absolute; /*Added for proper positioning */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+.main-page {
+    background-image: url('../assets/aron-visuals-BXOXnQ26B7o-unsplash.jpg');
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+    position: absolute; /* Added for proper positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.para-container {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    -webkit-backdrop-filter: blur(1px); /* For Safari support */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Soft border */
+    padding: 20px; /* Add some spacing */
+    border-radius: 10px; /* Rounded corners */
+    animation: slideIn 2s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.slide-in {
+    animation: slideIn 1s forwards;
+}
+
+.button {
+    transition: transform 0.8s ease;
+}
+
+.button:hover {
+    transform: scale(1.4);
+}
+
+body.light-mode {
+    background-color: #dd9f9f;
+    color: #641212;
+}
+
+body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#age-form{
+    animation: slideIn 2s forwards;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+#result{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    animation: slideIn 3s forwards;
+}
+
+/* Style the input box */
+#birthdate {
+    width: 350px;
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+    color: white;
+    border: 2px solid rgb(0, 255, 255);
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Change border color on hover */
+#birthdate:hover {
+    border-color: rgb(0, 234, 255);
+    box-shadow: 0 0 30px rgba(0, 238, 255, 0.5);
+}
+
+/* Custom placeholder text color */
+#birthdate::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Add a calendar icon (only visible in Chrome) */
+#birthdate::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
